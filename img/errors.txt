@@ -1,0 +1,1 @@
+[Thu Jan 10 2019 17:53:54 GMT+0200 (Восточная Европа (зима))] Layer "small1.jpg": Duplicate file name: small1.jpg

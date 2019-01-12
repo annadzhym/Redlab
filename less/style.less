@@ -1,0 +1,33 @@
+//imports
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,400');
+@import (inline)url(../css/additional/reset.css);
+@import "layout/header";
+@import "layout/home";
+@import "layout/voyager";
+@import "layout/drifter";
+@import "layout/collection";
+@import "layout/mask";
+@import "layout/footer";
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 0 #292929;
+  border-bottom: none;
+  & .navigation__item {
+    color: #000000;
+  }
+}
+
+//mixins
+//body {
+//  background-color: cornflowerblue;
+//}
+//code
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Roboto', sans-serif;

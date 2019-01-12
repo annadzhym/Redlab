@@ -1,0 +1,206 @@
+.carousel {
+  width: 85%;
+  float: right;
+  &__slider {
+    outline: none;
+    & img {
+      width: inherit;
+    }
+  }
+  &__navigation {
+    position: absolute;
+    top: 295px;
+    height: 450px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__arrow {
+    font-size: 35px;
+    transform: rotate(90deg);
+    color: #b8a47e;
+    text-decoration: none;
+    &:hover {
+      color: #000000;
+    }
+    &--container {
+      display: flex;
+      flex-direction: column;
+      height: 45px;
+      justify-content: space-between;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        background-color:  #b8a47e;
+        width: 3px;
+        height: 25px;
+        left: 50%;
+        bottom: -35px;
+      }
+    }
+  }
+  &__dots {
+  }
+  &__number {
+    font-family: 'Montserrat', sans-serif;
+    color:  rgba(135, 135, 135, 6);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: center;
+    &--active {
+      color:  #000000;
+      font-size: 60px;
+      font-weight: 400;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: 0 26px 81px 0 rgba(0, 15, 26, 0.21);
+      margin: 10px 0;
+    }
+  }
+}
+
+.home {
+  margin-bottom: 50px;
+  &__info {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 37px;
+  }
+  &__title {
+    color:  #292929;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 26px 81px rgba(0, 15, 26, 0);
+    margin: 15px 0;
+  }
+  &__subtitle {
+    color:  #383838;
+  }
+  &__link {
+    color:  #b8a47e;
+    text-decoration: none;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      background-color: #b8a47e;
+      width: 25px;
+      height: 1px;
+      top: 50%;
+      left: -30px;
+    }
+    &:after {
+      position: absolute;
+      color:  #b8a47e;
+      content: '>';
+      right: -35px;
+      top: 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home {
+    height: 600px;
+    &__info {
+      position: absolute;
+      top: 180px;
+      margin-left: 180px;
+      text-align: left;
+      font-size: 18px;
+    }
+    &__title {
+      font-size: 42.5px;
+      letter-spacing: 6.3px;
+      text-shadow: 0 26px 81px rgba(0, 15, 26, 0);
+      margin-bottom: 35px;
+    }
+    &__link {
+      margin-left: 130px;
+      &:after {
+        right: -15px;
+        top: 10%;
+      }
+    }
+  }
+  .carousel {
+    width: 69%;
+    float: right;
+    &__slider {
+      & img {
+        width: inherit;
+      }
+    }
+    &__navigation {
+      position: absolute;
+      top: 130px;
+      left: 40px;
+      height: 285px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__arrow {
+      font-size: 29px;
+      transform: rotate(90deg);
+      color: #b8a47e;
+      text-decoration: none;
+      &:hover {
+        color: #000000;
+      }
+      &--container {
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        justify-content: space-between;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          background-color:  #b8a47e;
+          width: 1px;
+          height: 25px;
+          left: 50%;
+          bottom: -10px;
+        }
+      }
+    }
+    &__dots {
+    }
+    &__number {
+      font-family: 'Montserrat', sans-serif;
+      color:  rgba(135, 135, 135, 6);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 35px;
+      text-align: center;
+      &--active {
+        color:  #000000;
+        font-size: 35px;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        box-shadow: 0 26px 81px 0 rgba(0, 15, 26, 0.21);
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1605px){
+  .carousel {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1780px){
+  .carousel {
+    width: 77%;
+  }
+}
