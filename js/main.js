@@ -5,8 +5,10 @@
           $('#content').css("display", "block");
           $('#preloader').delay(1000).fadeOut('slow');
       });
-
-      window.onscroll = function() {makeHeader()};
+      window.onscroll = function() {
+          makeHeader();
+          $('section').fadeIn(5000);
+      };
       var header = document.querySelector("header");
       var sticky = header.offsetTop;
       function makeHeader() {
@@ -61,6 +63,22 @@
                }
                ]*/
        });
+      // $('.voyager__arrow').on('click', function(event, slick, currentSlide, nextSlide){
+      //     currentSlide.animate({
+      //         height: '200px',
+      //         paddingTop: '100px'
+      //     },500)
+      //     nextSlide.animate({
+      //         height: '300px',
+      //         paddingTop: '0px'
+      //     },500)
+      // });
+    /*  $('.voyager__arrow').click(function () {
+          $('.slick-current').animate({
+              height: '300px',
+              paddingTop: '0px'
+          },1500)
+      });*/
       $('.drifter__carousel').slick({
           centerMode: true,
           slide: 'div',
@@ -77,6 +95,25 @@
           }
       });
 
+      $('.voyager__info--link, .drifter__info--link').mouseover(function () {
+         $(this).animate({
+             fontSize: '90px',
+         },500)
+      });
+      $('.voyager__info--link, .drifter__info--link').mouseout(function () {
+          $(this).animate({
+              fontSize: '65px',
+          },500)
+      });
+      var freqSecs = 1.2;
+      setInterval (blink, freqSecs*1000 );
+
+      function blink() {
+          var inout = (freqSecs*1000)/0.5;
+          $('.collection__link').fadeIn(inout).fadeOut(inout);
+      }
+
+
       $('.collection__gallery').magnificPopup({
           delegate: 'a',
           type: 'image',
@@ -89,8 +126,8 @@
           },
           image: {
               tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-              titleSrc: function(item) {
-                  return 'Best BAGS' + '<small>by TANNER GOODS</small>';
+              titleSrc: function() {
+                  return 'Best BAGS' +'<br>' + '<span>by TANNER GOODS' + '<br>' + 'portland ORE</span>';
               }
           }
       });
