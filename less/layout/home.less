@@ -9,12 +9,12 @@
   }
   &__navigation {
     position: absolute;
-    top: 295px;
-    height: 450px;
+    top: 30px;
+    height: 100px;
     left: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
   }
   &__arrow {
     font-size: 35px;
@@ -37,34 +37,33 @@
         width: 3px;
         height: 25px;
         left: 50%;
-        bottom: -35px;
+        bottom: -45px;
       }
     }
   }
   &__dots {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+    width: 50px;
+    position: absolute;
+    left: -15%;
+    top: 150px;
   }
   &__number {
     font-family: 'Montserrat', sans-serif;
     color:  rgba(135, 135, 135, 6);
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 45px;
     text-align: center;
-    &--active {
-      color:  #000000;
-      font-size: 60px;
-      font-weight: 400;
-      padding: 10px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      box-shadow: 0 26px 81px 0 rgba(0, 15, 26, 0.21);
-      margin: 10px 0;
-    }
+    padding: 14px;
   }
 }
 
 .home {
   margin-bottom: 50px;
+  position: relative;
   &__info {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -131,65 +130,34 @@
   }
   .carousel {
     width: 69%;
-    float: right;
-    &__slider {
-      & img {
-        width: inherit;
-      }
-    }
     &__navigation {
-      position: absolute;
       top: 130px;
-      left: 40px;
       height: 285px;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
     }
     &__arrow {
       font-size: 29px;
-      transform: rotate(90deg);
-      color: #b8a47e;
-      text-decoration: none;
-      &:hover {
-        color: #000000;
-      }
       &--container {
-        display: flex;
-        flex-direction: column;
         height: 60px;
-        justify-content: space-between;
-        position: relative;
         &:after {
-          position: absolute;
-          content: '';
-          background-color:  #b8a47e;
           width: 1px;
-          height: 25px;
-          left: 50%;
-          bottom: -10px;
+          bottom: -22px;
         }
       }
     }
-    &__dots {
-    }
     &__number {
-      font-family: 'Montserrat', sans-serif;
-      color:  rgba(135, 135, 135, 6);
       font-size: 22px;
-      font-weight: 700;
-      line-height: 35px;
-      text-align: center;
-      &--active {
-        color:  #000000;
-        font-size: 35px;
-        font-weight: 400;
-        padding: 10px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        box-shadow: 0 26px 81px 0 rgba(0, 15, 26, 0.21);
-        margin: 10px 0;
-      }
+      padding: 15px;
+    }
+    &__dots {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+      width: 50px;
+      position: absolute;
+      left: -43%;
+      top: 238px;
     }
   }
 }

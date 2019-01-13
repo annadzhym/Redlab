@@ -1,6 +1,11 @@
 'use strict';
 (function ($) {
   $(document).ready(function() {
+      $(window).on('load', function () {
+          $('#content').css("display", "block");
+          $('#preloader').delay(1000).fadeOut('slow');
+      });
+
       window.onscroll = function() {makeHeader()};
       var header = document.querySelector("header");
       var sticky = header.offsetTop;
@@ -26,7 +31,12 @@
             slide: 'div',
             prevArrow: '.carousel__prev',
             nextArrow: '.carousel__next',
-            dotsClass: 'slick-dots carousel__number'
+            dots: true,
+            dotsClass: 'slick-dots carousel__dots',
+            customPaging: function(slider,i) {
+                var slideNumber = (i + 1);
+                return '<a class="carousel__number">' + 0 + slideNumber + '</a>';
+            }
         });
        /* $('.carousel__next').click(function next() {
             $('.carousel').slick('slickNext');
@@ -59,8 +69,31 @@
           slidesToShow: 4,
           slidesToScroll: 1,
           initialSlide: 4,
+          dots: true,
+          dotsClass: 'slick-dots drifter__dots',
+          customPaging: function(slider,i) {
+              var slideNumber = (i + 1);
+              return '<a class="drifter__number">' + 0 + slideNumber + '</a>';
+          }
       });
-      $('.collection__gallery--item').pan();
+
+      $('.collection__gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          tLoading: 'Loading image #%curr%...',
+          mainClass: 'mfp-img-mobile',
+          gallery: {
+              enabled: true,
+              navigateByImgClick: true,
+              preload: [0,1]
+          },
+          image: {
+              tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+              titleSrc: function(item) {
+                  return 'Best BAGS' + '<small>by TANNER GOODS</small>';
+              }
+          }
+      });
 
       $('.footer__link').click(function (e) {
           e.preventDefault();

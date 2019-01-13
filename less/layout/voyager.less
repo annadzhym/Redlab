@@ -37,6 +37,7 @@
     float: right;
     margin-right: 3.5%;
     margin-top: -43%;
+    position: relative;
     &--title {
       color:  #ffffff;
       font-size: 22px;
@@ -45,9 +46,8 @@
     }
     &--text {
       width: 60%;
-      position: relative;
       text-align: right;
-      &:before {
+    /*  &:before {
         position: absolute;
         content: '';
         width: 100px;
@@ -63,21 +63,66 @@
         font-size: 55px;
         bottom: -82px;
         left: 50%;
-      }
+      }*/
+    }
+    &--link {
+      position: absolute;
+      width: 11%;
+      height: 65px;
+      background-color: #ffffff;
+      left: 50%;
+      bottom: -70px;
+      font-size: 65px;
+      justify-content: center;
+      color: #878787;
+      display: flex;
+      text-decoration: none;
+      padding: 6px 0 0;
     }
   }
 
-
+  &__container {
+    position: relative;
+  }
+  &__proposal {
+    position: absolute;
+    right: 33%;
+    top: 15px;
+    width: 20%;
+    padding: 1% 2%;
+    border: 1px solid #000000;
+    height: 100px;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 3;
+    &--price {
+      color:  #000000;
+      font-size: 35px;
+      font-weight: 700;
+      text-align: left;
+    }
+    &--link {
+      color:  rgba(135, 135, 135, 1);
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 70px;
+    }
+  }
   &__carousel {
     width: 100%;
     margin-bottom: 10px;
     &--slider {
-      width: 24.5%;
       margin: 0 0.25%;
       height: 200px;
       outline: none;
+      padding-top: 100px;
       &.slick-current {
-        height: 270px;
+        height: 300px;
+        padding-top: 0;
       }
       & img {
         width: 100%;
@@ -126,31 +171,6 @@
         top: -20px;
         left: 50%;
       }
-    }
-  }
-  &__proposal {
-    width: 20%;
-    margin-left: 45%;
-    padding: 1% 2%;
-    border: 1px solid #000000;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    z-index: 3;
-    &--price {
-      color:  #000000;
-      font-size: 35px;
-      font-weight: 700;
-      text-align: left;
-    }
-    &--link {
-      color:  rgba(135, 135, 135, 1);
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-left: 70px;
     }
   }
 }
